@@ -1,47 +1,24 @@
 import styled from 'styled-components';
 import tw from 'twin.macro';
 import './App.css';
-import { SearchBar } from './components/searchbar';
+import { HomePage } from './containers/HomePage';
 
-const AppContainer = styled.body`
+const AppContainer = styled.div`
   ${tw`
-  container
-  px-4
+  w-full
+  h-full
   flex
+  flex-col
+  bg-tahiti
   `};
 `;
 
-const AppContainerLeft = styled.div`
-  ${tw`
-    flex-1 
-    w-1/4
-    px-4
-  `};
-`;  
-
-const AppContainerRight = styled.div`
-  ${tw`
-    flex-1 
-    w-3/4
-  `};
-`;
-
-function App() {
+const App = function () {
   return (
     <AppContainer>
-
-      <AppContainerLeft>
-        <ul>
-          <li>Baseball</li>
-          <li>Football</li>
-          <li>Basketball</li>
-        </ul>
-      </AppContainerLeft>
-      <AppContainerRight>
-        CardHaven
-      </AppContainerRight>
+      <HomePage />
     </AppContainer>
   );
-}
+};
 
 export default App;

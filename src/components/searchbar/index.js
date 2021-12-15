@@ -2,14 +2,28 @@ import React from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 
-const SearchContainer = styled.input`
+const SearchContainer = styled.div`
     ${tw`
-
+        container
+        flex-1
+        w-full
+        bg-rose
     `};
 `;
 
-export function SearchBar() {
+const Input = styled.input`
+    min-height: 40px;
+    ${tw`
+        w-full
+        rounded-md
+    `};
+`;
+
+export var SearchBar = function () {
     return (
-        <SearchContainer type="text" placeholder="Search.."> Search </SearchContainer>
+        <SearchContainer>
+            <Input type='text' placeholder='Search...' />
+        </SearchContainer>
+
     );
-}
+};
